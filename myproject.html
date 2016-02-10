@@ -1,0 +1,23 @@
+<div class="intro">
+   <div class="group">
+      <div class="animated zoomIn">Responsive Front-end Development</div>
+   </div>
+</div>
+<div id="section3">
+   <!--<div align="center"><span class="projectHeader">My Projects</span></div>-->
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-4 hiddenContent visible animated fadeIn full-visible" ng-repeat="project in myProjects" ng-style="{'background':project.color}"  ng-mouseenter="myClass='showMe'" ng-mouseleave="myClass=''" >
+            <div class="projectDescription" style="height:300px;">
+               <a>
+                  <div><img ng-src="{{project.img}}" alt="hotels" class="img-responsive"></div>
+                  <h3 ng-bind="project.projectHeading" class="animated bounceInDown"></h3>
+               </a>
+            </div>
+            <div class="btnHide animated fadeInUp" ng-class="myClass">
+               <a href="#" class="btnContainer btn btn-secondary">Know More</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

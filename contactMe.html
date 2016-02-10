@@ -1,0 +1,40 @@
+<div class="intro">
+   <div class="group">
+      <div class="animated zoomIn">Lets dicuss, How to do yours better?</div>
+   </div>
+</div>
+<div id="section4" class="animateMe hiddenContent visible animated fadeIn full-visible">
+   <form class="form-signin" method="post" name="index"
+      action="myfirstfile.php">
+      <div align="center" style="margin-left:10%;margin-right:10%">
+         <div class="row">
+            <div class="col-md-6">
+               <input type="text" id="inputUsername" name="inputUsername" class="form-control" ng-model="nameContact" placeholder="Name" style="margin-bottom:1%" required>
+            </div>
+            <div class="col-md-6">
+               <input type="email" id="inputEmail" name="inputEmail" class="form-control" ng-model="emailContact" placeholder="Email address" style="margin-bottom:1%" required>
+            </div>
+            <div class="col-md-4">
+               <input type="number" id="inputPhoneNumber" name="inputPhoneNumber" ng-model="phoneContact" class="form-control" placeholder="Phone Number" style="margin-bottom:1%" required>
+            </div>
+            <div class="col-md-4">
+               <select class="form-control" ng-model="projectType" ng-options="contact.id as contact.typeName for contact in contactMeProd">
+                  <option value="">--Choose type--</option>
+               </select>
+            </div>
+            <div class="col-md-4">
+               <select class="form-control" ng-model="budgetContact" ng-options="contact.id as contact.amt for contact in contactMeBudget">
+                  <option value="">--Choose Budget--</option>
+               </select>
+            </div>
+            <div class="col-md-12">
+               <textarea name="inputContent" ng-model="contentContact" id="inputContent" class="form-control" placeholder="Content" style="height:170px;margin-bottom:1%" required ></textarea>
+            </div>
+            <div class="col-md-12">
+               <input class="btn btn-lg btn-primary btn-block"  type="button" ng-click="sendPost()" value="I reply in less than 24 hrs.">
+            </div>
+            <div class="clr"></div>
+         </div>
+      </div>
+   </form>
+</div>

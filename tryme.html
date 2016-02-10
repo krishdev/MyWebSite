@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+function togglechecptn(){ 
+    /* $.ajaxSetup({ cache: false }); */
+    $.ajax({
+						        	
+						            url:   "myfirstfile.php",
+						            type: "POST",
+						            data: {
+						                "inputUsername" : "Krishna test Ajax",
+						                "inputEmail" : "mail@gm.com",
+										"inputContent" : "Hello"
+						            },
+    								success:function(data) {
+    						            console.log('success');
+    						        }
+						        });
+    
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="togglechecptn()">Submit</button>
+</body>
+</html>
